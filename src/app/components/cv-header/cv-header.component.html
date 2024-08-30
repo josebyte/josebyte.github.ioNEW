@@ -1,0 +1,36 @@
+<img [src]="photo" class="only-print rounded-circle photo" >
+<div class="title">
+  <h1>{{personalInformation.firstName + ' ' + personalInformation.lastName}}</h1>
+  <h2>{{'title' | translate}}</h2>
+</div>
+
+<div id="contactDetails" class="col-xl-5 col-lg-6">
+  <div class="row">
+    <div class="col-sm-6 col-xs-12 contactItem">
+      <i-feather name="user"></i-feather>
+      <ng-icon name="bootstrapPerson"></ng-icon>
+      {{ personalInformation.dateOfBirth.date | date: 'dd/MM/yyyy' }}
+    </div>
+    <div class="col-sm-6 col-xs-12 contactItem">
+      <ng-icon name="bootstrapEnvelope"></ng-icon>
+      {{ personalInformation.emails[0] }}
+    </div>
+    <div class="col-sm-6 col-xs-12 contactItem">
+      <ng-icon name="bootstrapTelephone"></ng-icon>
+      {{ personalInformation.phones[0].phoneNumber }}
+    </div>
+    <div class="col-sm-6 col-xs-12 contactItem">
+      <ng-icon name="bootstrapGeoAlt"></ng-icon>
+      {{personalInformation.addresses[0].city }}
+      Bizkaia (España)
+    </div>
+    <div class="col-sm-6 col-xs-12 contactItem no-print">
+      <ng-icon name="bootstrapGithub"></ng-icon>
+      <a href="https://github.com/josebyte"> Github</a>
+    </div>
+    <div class="col-sm-6 col-xs-12 contactItem no-print">
+      <ng-icon name="bootstrapLinkedin"></ng-icon>
+      <a href="https://www.linkedin.com/in/joseba-madrigal-18166b98/"> Linkedin</a>
+    </div>
+  </div>
+</div>

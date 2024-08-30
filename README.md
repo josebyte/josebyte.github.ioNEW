@@ -4,7 +4,7 @@ Angular 18 static site
 
 - Tailwind
 - Icons:  @ng-icons-core y @ng-icons/bootstrap-icons (https://www.npmjs.com/package/@ng-icons/bootstrap-icons)
-- 
+- ngxtranslate
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.1.
