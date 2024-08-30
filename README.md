@@ -1,9 +1,9 @@
 # Jmadrigal
 
-Angular 18 static personal site
+Angular 18 static site
 
 - Tailwind
-- Icons: https://github.com/avmaisak/ngx-bootstrap-icons#usage
+- Icons:  @ng-icons-core y @ng-icons/bootstrap-icons (https://www.npmjs.com/package/@ng-icons/bootstrap-icons)
 - 
 
 
