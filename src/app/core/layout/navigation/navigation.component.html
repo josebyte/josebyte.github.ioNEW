@@ -3,8 +3,11 @@
     <div class="flex h-16 items-center justify-between">
       <div class="flex items-center">
         <div class="flex-shrink-0">
-          <img class="h-8 w-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Joseba Madrigal">
+          <img class="w-10 h-10 rounded-full cursor-pointer" routerLink="/cv" [src]="cv.userPicture" [alt]="cv.profile.personalInformation.firstName + ' ' + cv.profile.personalInformation.lastName">
         </div>
+        <h1 class="text-white ml-3">
+          {{cv.profile.personalInformation.firstName + ' ' + cv.profile.personalInformation.lastName}}
+        </h1>
         <div class="hidden md:block">
           <div class="ml-10 flex items-baseline space-x-4">
             <a routerLink="" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white" aria-current="page"><ng-icon name="bootstrapFilePerson"></ng-icon>CV</a>

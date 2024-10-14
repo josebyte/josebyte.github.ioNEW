@@ -10,5 +10,4 @@ import { NavigationComponent } from "./core/layout/navigation/navigation.compone
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'jmadrigal';
 }

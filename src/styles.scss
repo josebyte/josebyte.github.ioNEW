@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+html, body{
+  font-family: "Catamaran", sans-serif;
+  font-optical-sizing: auto;
+}
+
 //Small scrollbar:
 ::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
