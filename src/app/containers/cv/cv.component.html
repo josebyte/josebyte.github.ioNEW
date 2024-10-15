@@ -1,10 +1,9 @@
 <app-cv-header [photo]="cv.userPicture" [personalInformation]="cv.profile.personalInformation"></app-cv-header>
 
-<!--
+
 @for(section of sections; track section){
   <app-cv-section [section]="section"></app-cv-section>
 }
--->
 
 @for(customSection of cv.profile.customSections; track customSection){
   <section class="row px-4">

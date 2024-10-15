@@ -11,9 +11,7 @@
       </span>
       }
       @if(item.date){
-        <span class="periodo">
-        {{item.date}}
-      </span>
+        <span class="periodo"> {{ item.date }} </span>
       }
       @if(item.qualification){
         <div>
@@ -36,7 +34,7 @@
       @if(item.organisationName || item.employer){
         <p class="subDetails">
           <img class="organisation-logo"
-               [src]="'public/images/organisations/'+ (item.organisationName ? item.organisationName : item.employer) +'.png'">
+               [src]="'/images/organisations/'+ (item.organisationName ? item.organisationName : item.employer) +'.png'">
           ({{ item.organisationName ? item.organisationName : item.employer}})
         </p>
       }

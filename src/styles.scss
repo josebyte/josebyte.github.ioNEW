@@ -21,3 +21,19 @@ html, body{
 ::-webkit-scrollbar-thumb {
   background-color: #606060;
 }
+
+
+.link{
+  @apply text-blue-500 dark:text-blue-500 hover:underline;
+}
+
+.organisation-logo {
+  max-height: 42px;
+}
+
+.periodo {
+  @apply relative text-white bg-blue-500 float-right font-bold;
+  top: 0;
+  padding: 3px 7px;
+  border-radius: 3px;
+}

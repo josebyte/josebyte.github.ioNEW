@@ -18,7 +18,7 @@ registerLocaleData(localeEs, 'es');
 registerLocaleData(localeEn, 'en');
 
 export function createTranslateLoader(http: HttpClient): TranslateHttpLoader {
-  return new TranslateHttpLoader(http, './public/i18n/', '.json');
+  return new TranslateHttpLoader(http, './i18n/', '.json');
 }
 
 export const appConfig: ApplicationConfig = {
