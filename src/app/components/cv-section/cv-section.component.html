@@ -1,52 +1,55 @@
-<div class="sectionTitle col-md-3">
-  <h1>{{section.name | translate}}</h1>
-</div>
-<div class="sectionContent col-md-9">
+<div class="grid grid-cols-12">
+  <div class="sectionTitle md:col-span-3">
+    <h1>{{section.name | translate}}</h1>
+  </div>
+  <div class="sectionContent md:col-span-9">
 
-  @for (item of section?.items; track item) {
-    <article class="mb-5">
-      @if(item.startDate && item.endDate) {
-        <span class="periodo">
+    @for (item of section?.items; track item) {
+      <article class="mb-5">
+        @if(item.startDate && item.endDate) {
+          <span class="periodo">
         {{item.startDate.date | date: 'yyyy'}} - {{item.endDate.date | date: 'yyyy'}}
       </span>
-      }
-      @if(item.date){
-        <span class="periodo"> {{ item.date }} </span>
-      }
-      @if(item.qualification){
-        <div>
-          <h2>
-            @if(!item.url){
-              {{ item.qualification }}
-            }
-            @else {
-              <a class="link" [href]="item.url">{{ item.qualification }}</a>
-            }
-          </h2>
-        </div>
-      }
-      @if(item.occupation?.label && item.url){
-        <div>
-          <h2>{{ item.occupation.label }}</h2>
-        </div>
-      }
+        }
+        @if(item.date){
+          <span class="periodo"> {{ item.date }} </span>
+        }
+        @if(item.qualification){
+          <div>
+            <h2>
+              @if(!item.url){
+                {{ item.qualification }}
+              }
+              @else {
+                <a class="link" [href]="item.url">{{ item.qualification }}</a>
+              }
+            </h2>
+          </div>
+        }
+        @if(item.occupation?.label && item.url){
+          <div>
+            <h2>{{ item.occupation.label }}</h2>
+          </div>
+        }
 
-      @if(item.organisationName || item.employer){
-        <p class="subDetails">
-          <img class="organisation-logo"
-               [src]="'/images/organisations/'+ (item.organisationName ? item.organisationName : item.employer) +'.png'">
-          ({{ item.organisationName ? item.organisationName : item.employer}})
-        </p>
-      }
+        @if(item.organisationName || item.employer){
+          <p class="subDetails">
+            <img class="organisation-logo"
+                 [src]="'/images/organisations/'+ (item.organisationName ? item.organisationName : item.employer) +'.png'">
+            ({{ item.organisationName ? item.organisationName : item.employer}})
+          </p>
+        }
 
-      <p class="subDesc mt-2" [innerHTML]="item.description ? item.description : item.mainActivities"></p>
+        <p class="subDesc mt-2" [innerHTML]="item.description ? item.description : item.mainActivities"></p>
 
-      <!--todo: tecnologias-->
+        <!--todo: tecnologias-->
 
-      <!--
-      <app-tecnologies [text]="item.description ? item.description : item.mainActivities"></app-tecnologies>
-      -->
-    </article>
-  }
+        <!--
+        <app-tecnologies [text]="item.description ? item.description : item.mainActivities"></app-tecnologies>
+        -->
+      </article>
+    }
 
+  </div>
 </div>
+
