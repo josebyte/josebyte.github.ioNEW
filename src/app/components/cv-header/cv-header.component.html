@@ -1,35 +1,37 @@
-<header class="bg-white shadow">
-  <img [src]="photo" class="w-12 h-12 only-print rounded photo" >
-  <div class="title">
-    <h1>{{personalInformation.firstName + ' ' + personalInformation.lastName}}</h1>
-    <h2>{{'title' | translate}}</h2>
+<header class="flex flex-wrap">
+
+  <div class="flex-1">
+    <img [src]="photo" class="w-12 h-12 only-print rounded photo" >
+    <div class="title">
+      <h1>{{personalInformation.firstName + ' ' + personalInformation.lastName}}</h1>
+      <h2>{{'title' | translate}}</h2>
+    </div>
   </div>
 
-  <div id="contactDetails" class="col-xl-5 col-lg-6">
-    <div class="row">
-      <div class="col-sm-6 col-xs-12 contactItem">
-        <!--<i-feather name="user"></i-feather>-->
+  <div class="flex-1">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div class="contactItem">
         <ng-icon name="bootstrapPerson"></ng-icon>
         {{ personalInformation.dateOfBirth.date | date: 'dd/MM/yyyy' }}
       </div>
-      <div class="col-sm-6 col-xs-12 contactItem">
+      <div class="contactItem">
         <ng-icon name="bootstrapEnvelope"></ng-icon>
         {{ personalInformation.emails[0] }}
       </div>
-      <div class="col-sm-6 col-xs-12 contactItem">
+      <div class="contactItem">
         <ng-icon name="bootstrapTelephone"></ng-icon>
         {{ personalInformation.phones[0].phoneNumber }}
       </div>
-      <div class="col-sm-6 col-xs-12 contactItem">
+      <div class="contactItem">
         <ng-icon name="bootstrapGeoAlt"></ng-icon>
         {{personalInformation.addresses[0].city }}
         Bizkaia (España)
       </div>
-      <div class="col-sm-6 col-xs-12 contactItem no-print">
+      <div class="contactItem no-print">
         <ng-icon name="bootstrapGithub"></ng-icon>
         <a href="https://github.com/josebyte"> Github</a>
       </div>
-      <div class="col-sm-6 col-xs-12 contactItem no-print">
+      <div class="contactItem no-print">
         <ng-icon name="bootstrapLinkedin"></ng-icon>
         <a href="https://www.linkedin.com/in/joseba-madrigal-18166b98/"> Linkedin</a>
       </div>
