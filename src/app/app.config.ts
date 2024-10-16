@@ -7,7 +7,7 @@ import { provideClientHydration } from '@angular/platform-browser';
 //Translation and locale
 import {TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import {HttpClient, provideHttpClient} from "@angular/common/http";
+import { HttpClient, provideHttpClient, withFetch } from "@angular/common/http";
 
 //Angular Locales:
 import localeEs from '@angular/common/locales/es';
@@ -25,7 +25,7 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
-    provideHttpClient(),
+    provideHttpClient(withFetch()),
     provideClientHydration(),
     { provide: LOCALE_ID, useValue: 'es'},
     importProvidersFrom(TranslateModule.forRoot({
