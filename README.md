@@ -1,6 +1,6 @@
 # Jmadrigal
 
-Angular 18 static site
+Personal page with Angular 18 SSG
 
 - Tailwind
 - Icons:  @ng-icons-core y @ng-icons/bootstrap-icons (https://www.npmjs.com/package/@ng-icons/bootstrap-icons)
