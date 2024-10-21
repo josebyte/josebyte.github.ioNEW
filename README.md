@@ -6,6 +6,10 @@ Personal page with Angular 18 SSG
 - Icons:  @ng-icons-core y @ng-icons/bootstrap-icons (https://www.npmjs.com/package/@ng-icons/bootstrap-icons)
 - ngxtranslate
 
+todo:
+- Header
+- Responsive (mobile & desktop)
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.1.
 

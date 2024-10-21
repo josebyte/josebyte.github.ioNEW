@@ -1,6 +1,6 @@
 <div class="grid grid-cols-12">
   <div class="sectionTitle md:col-span-3">
-    <h1>{{section.name | translate}}</h1>
+    <h2 class="">{{section.name | translate}}</h2>
   </div>
   <div class="sectionContent md:col-span-9">
 
@@ -36,7 +36,7 @@
           <div>
             <img class="inline-block max-h-10"
                  [src]="'/images/organisations/'+ (item.organisationName ? item.organisationName : item.employer) +'.png'">
-            <p class="inline-block italic">({{ item.organisationName ? item.organisationName : item.employer}})</p>
+            <p class="inline-block italic size text-sm">({{ item.organisationName ? item.organisationName : item.employer}})</p>
           </div>
         }
 
