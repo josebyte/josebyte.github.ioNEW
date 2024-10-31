@@ -35,7 +35,8 @@
         @if(item.organisationName || item.employer){
           <div>
             <img class="inline-block max-h-10"
-                 [src]="'/images/organisations/'+ (item.organisationName ? item.organisationName : item.employer) +'.png'">
+                 [src]="'/images/organisations/'+ (item.organisationName ? item.organisationName : item.employer) +'.png'"
+                 (error)="getErrorImage($event)">
             <p class="inline-block italic size text-sm">({{ item.organisationName ? item.organisationName : item.employer}})</p>
           </div>
         }

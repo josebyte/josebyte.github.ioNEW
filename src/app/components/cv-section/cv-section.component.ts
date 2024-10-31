@@ -14,4 +14,8 @@ import { DatePipe } from "@angular/common";
 })
 export class CvSectionComponent {
   @Input() section: any;
+
+  getErrorImage(event: any){
+    event.target.src = '/images/no-img.png';
+  }
 }
